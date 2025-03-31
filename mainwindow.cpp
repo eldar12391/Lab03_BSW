@@ -9,6 +9,27 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    this->setStyleSheet(
+        "QMainWindow { background-color: #f0f0f0; }"
+        "QPushButton {"
+        "   background: #4CAF50;"
+        "   color: white;"
+        "   border: none;"
+        "   padding: 10px;"
+        "   font-size: 16px;"
+        "}"
+        "QPushButton:hover { background: #45a049; }"
+        "QLineEdit {"
+        "   padding: 5px;"
+        "   border: 1px solid #ccc;"
+        "   font-size: 14px;"
+        "}"
+        "QLabel {"
+        "   font-size: 20px;"
+        "   color: #333;"
+        "   qproperty-alignment: AlignCenter;"
+        "}"
+    );
 
     connect(ui->generateButton, &QPushButton::clicked, this, &MainWindow::onGenerateClicked);
 }
